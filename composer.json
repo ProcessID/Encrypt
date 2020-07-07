@@ -1,0 +1,7 @@
+{
+    "name": "ProcessID/Encrypt",
+    "description": "Encryption / decryption with OpenSSL",
+    "require": {
+        "php": "^5.3"
+    }
+}
