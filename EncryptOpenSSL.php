@@ -14,7 +14,7 @@
    // $methode = <'aes-256-cbc' | ...>
    
    
-   namespace ProcessID\Encrypt;
+   namespace processid\encrypt;
    
    class EncryptOpenSSL {
       private $_key_aes256;
