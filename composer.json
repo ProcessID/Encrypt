@@ -2,6 +2,6 @@
     "name": "processid/encrypt",
     "description": "Encryption / decryption with OpenSSL",
     "require": {
-        "php": "^5.3"
+        "php": ">=5.4"
     }
 }
