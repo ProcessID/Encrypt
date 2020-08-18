@@ -13,9 +13,6 @@ namespace processid\encrypt;
 class EncryptFileOpenSSL {
     private $_password;
     private $_method;
-
-    protected $_file_in;
-    protected $_file_out;
     
     static $FILE_ENCRYPTION_BLOCKS = 10000;
 
@@ -31,15 +28,7 @@ class EncryptFileOpenSSL {
     public function SetMethod($method) {
         $this->_method = $method;
     }
-
-    public function SetFile_in($file_in) {
-        $this->_file_in = $file_in;
-    }
-
-    public function SetFile_in($file_out) {
-        $this->_file_out = $file_out;
-    }
-
+    
     private function password() {
         return $this->_password;
     }
@@ -47,15 +36,7 @@ class EncryptFileOpenSSL {
     private function method() {
         return $this->_method;
     }
-
-    public function file_in() {
-        return $this->_file_in;
-    }
-
-    public function file_out() {
-        return $this->_file_out;
-    }
-
+    
     function encrypt_file($file_in, $file_out) {
         $iv_length = openssl_cipher_iv_length($this->method());
         $key = substr(sha1($this->password(), true), 0, 16);
